@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'org.example'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly('jakarta.platform:jakarta.jakartaee-web-api:9.0.0')
+    compileOnly('jakarta.servlet:jakarta.servlet-api:6.0.0')
+    compileOnly('jakarta.json:jakarta.json-api:2.1.1')
+    compileOnly('jakarta.json.bind:jakarta.json.bind-api:3.0.0')
+    compileOnly('jakarta.ejb:jakarta.ejb-api:4.0.1')
+
+    compileOnly('com.fasterxml.jackson.core:jackson-databind:2.13.4.2')
+}
+
+war {
+    archiveFileName = 'lab2.war'
+}
